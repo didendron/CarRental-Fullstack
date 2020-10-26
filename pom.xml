@@ -24,6 +24,13 @@
 	</dependency>
 	
 	<dependency>
+    	<groupId>javax.servlet</groupId>
+    	<artifactId>servlet-api</artifactId>
+   	 	<version>3.0-alpha-1</version>
+    	<scope>provided</scope>
+	</dependency>
+	
+	<dependency>
     	<groupId>org.hibernate</groupId>
     	<artifactId>hibernate-core</artifactId>
     	<version>5.4.22.Final</version>
@@ -71,6 +78,7 @@
         <version>3.2.3</version>
         <configuration>
           <warSourceDirectory>WebContent</warSourceDirectory>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
         </configuration>
       </plugin>
     </plugins>

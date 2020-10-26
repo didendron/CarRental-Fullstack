@@ -36,6 +36,7 @@ public class CarRentalDao {
                 .buildSessionFactory(serviceRegistry);*/
 		
 		//on heroku
+		
 		Configuration configuration = new Configuration();
 		configuration.addAnnotatedClass(Car.class);
 		configuration.addAnnotatedClass(Reservation.class);
