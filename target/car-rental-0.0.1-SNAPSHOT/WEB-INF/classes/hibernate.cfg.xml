@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>     
+  <session-factory>
+    <property name="connection.url">jdbc:mysql://localhost:3306/carrentaldb?serverTimezone=UTC&amp;useUnicode=yes&amp;characteEncoding=UTF-8</property>
+    <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+    <property name="connection.username">root</property>
+    <property name="connection.password">alibaba1</property>
+    <property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+    <property name="hibernate.hbm2ddl.auto">none</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.format_sql">true</property>
+      
+    <mapping class="com.carrental.model.Reservation" />
+    <mapping class="com.carrental.model.Car" />
+    <mapping class="com.carrental.model.City" />
+     
+  </session-factory>
+</hibernate-configuration>
