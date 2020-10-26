@@ -1,0 +1,52 @@
+*{
+	margin: 0;
+	padding: 0;
+	
+}
+body {
+	background: #ffffff;
+}
+
+.beforeHeader{
+	background-color: #808080;
+	text-align:center;
+	padding:2px;
+	
+}
+.headerColor{
+	background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+	
+}
+.footerColor{
+	background-color: #808080;
+	
+}
+.navbar-container{
+	display: flex;
+  	align-items: center;
+  	justify-content: center
+}
+
+.carousel-inner img{
+	height:60%;
+	width:60%;
+	
+}
+#myCarousel{
+	background-color:#000000;
+	height:600px;
+}
+
+.carousel-caption h3{
+	color:#800080;
+}
+
+
+.my-container{
+	max-width:80%;
+	margin: 0px auto;
+}
+
+
+
+
