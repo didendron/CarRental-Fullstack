@@ -49,7 +49,7 @@ public class CarRentalDao {
 		}
 		
 		ServiceRegistry serviceRegistry=new StandardServiceRegistryBuilder().
-			    configure("hibernate.cfg.xml").
+			    configure("/src/hibernate.cfg.xml").
 			    applySettings(jdbcUrlSettings).
 			    build();
 		
