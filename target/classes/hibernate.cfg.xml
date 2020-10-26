@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-configuration SYSTEM "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>     
   <session-factory>
-    <property name="connection.url">jdbc:mysql://localhost:3306/carrentaldb?serverTimezone=UTC&amp;useUnicode=yes&amp;characteEncoding=UTF-8</property>
+    <property name="connection.url">mysql://bf891d30dccc14:6534018c@us-cdbr-east-02.cleardb.com/heroku_94d83f03141d25e?reconnect=true</property>
     <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
     <property name="connection.username">bf891d30dccc14</property>
     <property name="connection.password">6534018c</property>
