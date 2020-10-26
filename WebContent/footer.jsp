@@ -31,9 +31,9 @@
 		
 		</div>
 	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-  	<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+	<script src="resources/JS/jquery.min.js"></script>
+	<script src="resources/JS/bootstrap.bundle.min.js"></script>
+  	<script src="resources/JS/jquery-ui.js"></script>
 </footer>
 </body>
 </html>

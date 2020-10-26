@@ -5,9 +5,9 @@
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="resources/CSS/my.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="resources/CSS/bootstrap.min.css" >
+<script src="resources/JS/bootstrap.bundle.min.js" ></script>
+ <link rel="stylesheet" type="text/css" href="resources/CSS/jquery-ui.css">
 </head>
 </head>
 <body>
