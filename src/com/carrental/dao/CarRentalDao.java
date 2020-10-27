@@ -3,9 +3,8 @@ package com.carrental.dao;
 
 import java.sql.Date;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+import java.util.Properties;
 
 import javax.persistence.TypedQuery;
 
@@ -13,6 +12,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.cfg.Environment;
 import org.hibernate.service.ServiceRegistry;
 
 import com.carrental.model.Car;
@@ -24,7 +24,20 @@ public class CarRentalDao {
 	private SessionFactory getSessionFactory() {
 		//on localhost
 		/*
-		Configuration configuration = new Configuration().configure();
+		Configuration configuration = new Configuration();
+		
+		Properties settings=new Properties();
+		
+		settings.put(Environment.DRIVER,"com.mysql.cj.jdbc.Driver");
+		settings.put(Environment.URL,"jdbc:mysql://localhost:3306/carrentaldb?serverTimezone=UTC&useUnicode=yes&characteEncoding=UTF-8");
+		settings.put(Environment.USER,"root");
+		settings.put(Environment.PASS,"alibaba1");
+		settings.put(Environment.DIALECT,"org.hibernate.dialect.MySQL5InnoDBDialect");
+		settings.put(Environment.SHOW_SQL,"true");
+		settings.put(Environment.FORMAT_SQL,"true");
+		settings.put(Environment.HBM2DDL_AUTO,"none");
+		
+		configuration.setProperties(settings);
 		configuration.addAnnotatedClass(Car.class);
 		configuration.addAnnotatedClass(Reservation.class);
 		configuration.addAnnotatedClass(City.class);
@@ -38,20 +51,25 @@ public class CarRentalDao {
 		//on heroku
 		
 		Configuration configuration = new Configuration();
+		
+		Properties settings=new Properties();
+		
+		settings.put(Environment.DRIVER,"com.mysql.cj.jdbc.Driver");
+		settings.put(Environment.URL,"mysql://bf891d30dccc14:6534018c@us-cdbr-east-02.cleardb.com/heroku_94d83f03141d25e?reconnect=true");
+		settings.put(Environment.USER,"bf891d30dccc14");
+		settings.put(Environment.PASS,"6534018c");
+		settings.put(Environment.DIALECT,"org.hibernate.dialect.MySQL5InnoDBDialect");
+		settings.put(Environment.SHOW_SQL,"true");
+		settings.put(Environment.FORMAT_SQL,"true");
+		settings.put(Environment.HBM2DDL_AUTO,"none");
+		
+		configuration.setProperties(settings);
 		configuration.addAnnotatedClass(Car.class);
 		configuration.addAnnotatedClass(Reservation.class);
 		configuration.addAnnotatedClass(City.class);
-		
-		Map<String,String> jdbcUrlSettings = new HashMap<>();
-		String jdbcDbUrl = System.getenv("JDBC_DATABASE_URL");
-		if (null != jdbcDbUrl) {
-		  jdbcUrlSettings.put("hibernate.connection.url", System.getenv("JDBC_DATABASE_URL"));
-		}
-		
-		ServiceRegistry serviceRegistry=new StandardServiceRegistryBuilder().
-			    configure("/src/hibernate.cfg.xml").
-			    applySettings(jdbcUrlSettings).
-			    build();
+		ServiceRegistry serviceRegistry
+        = new StandardServiceRegistryBuilder()
+            .applySettings(configuration.getProperties()).build();
 		
 		SessionFactory sessionFactory = configuration
                 .buildSessionFactory(serviceRegistry);
