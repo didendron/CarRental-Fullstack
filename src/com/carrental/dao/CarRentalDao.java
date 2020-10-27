@@ -55,7 +55,7 @@ public class CarRentalDao {
 		Properties settings=new Properties();
 		
 		settings.put(Environment.DRIVER,"com.mysql.cj.jdbc.Driver");
-		settings.put(Environment.URL,"mysql://bf891d30dccc14:6534018c@us-cdbr-east-02.cleardb.com/heroku_94d83f03141d25e?reconnect=true");
+		settings.put(Environment.URL,"jdbc:mysql://bf891d30dccc14:6534018c@us-cdbr-east-02.cleardb.com/heroku_94d83f03141d25e");
 		settings.put(Environment.USER,"bf891d30dccc14");
 		settings.put(Environment.PASS,"6534018c");
 		settings.put(Environment.DIALECT,"org.hibernate.dialect.MySQL5InnoDBDialect");
